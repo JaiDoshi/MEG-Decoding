@@ -31,12 +31,18 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 
 
 #### 3.1 Brain Decoding
-- **[train_vit.py](src/neural models/vit/train_vit.py)**  
+- **[train_vit.py](src/neural%20models/vit/train_vit.py)**  
+## Running the MEG Training Script with SimpleConv
 
+This script trains a model for MEG data analysis using the `SimpleConv` architecture. The script includes configurable options for dataset type, preprocessing method, loss functions, and more. To run the script, ensure all necessary Python packages (e.g., PyTorch, NumPy, MNE, WandB) are installed, and use the following command to execute the script with your desired configuration:
+
+   ```bash
+   python simpleconv_train.py --epochs 100 --batch_size 128 --lr 3e-4 --dilation_type expo --dropout 0.2 --embeddings_type dino --dataset_type large --preprocessing_type raj --wandb_project YourProjectName
+   ```
 
 
 #### 3.2 Vision Transformer
-- **[train_vit.py](src/neural models/vit/train_vit.py)**  
+- **[train_vit.py](src/neural%20models/vit/train_vit.py)**  
 
 The training script is designed to train MEG models using configurable parameters. To run the training script, follow these steps, and run the script with the desired arguments. You can use the following example command:
 
@@ -46,7 +52,7 @@ The training script is designed to train MEG models using configurable parameter
 
 #### 3.3 Diffusion
 To run the diffusion pipeline, modify the PATH variables in the Jupyter script:
-- **[reconstruction_with_diffusion_prior.ipynb](src/neural models/diffusion/reconstruction_with_diffusion_prior.ipynb)**  
+- **[reconstruction_with_diffusion_prior.ipynb](src/neural%20models/diffusion/reconstruction_with_diffusion_prior.ipynb)**  
 
 
 
