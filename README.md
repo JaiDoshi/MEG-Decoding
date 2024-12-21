@@ -16,10 +16,10 @@ To create the dimensionality-reduced fMRI data, run the script `fmri_dimensional
 To create the train test splits of the MEG dataset, specify the paths to the preprocessed MEG images and the image embeddings in cells 3, 4 and 7 and run the rest of the cells. The train and test datasets will be created in files `valid_epochs_small_train_resplit.pickle` and `valid_epochs_small_test_resplit.pickle`, and the corresponding RGB embeddings will be created in files `image_embeddings_vit_small_train_resplit.npy` and `image_embeddings_vit_test_small_resplit.npy` as dictionaries. Similarly, use the files `src/preprocessing/create_meg_fmri_subset.ipynb` and `src/preprocessing/create_meg_fmri_combined.ipynb` to create the subset of MEG images and the combination of MEG and fMRI images for the multimodal experiments. 
 
 ### 2. **Regression**
-- **[regression_fmri_all_participants.ipynb](src/regression/regression_fmri_all_participants.ipynb)**  
-- **[regression_meg_all_participants.ipynb](regression/regression_meg_all_participants.ipynb)**  
-- **[regression_meg_all_participants_fmri_subset.ipynb](regression/regression_meg_all_participants_fmri_subset.ipynb)**  
-- **[regression_meg_fmri_all_participants_combined.ipynb](regression/regression_meg_fmri_all_participants_combined.ipynb)**  
+- **[regression_fmri.ipynb](src/regression/regression_fmri.ipynb)**  
+- **[regression_meg.ipynb](src/regression/regression_meg.ipynb)**  
+- **[regression_meg_fmri_subset.ipynb](src/regression/regression_meg_fmri_subset.ipynb)**  
+- **[regression_meg_fmri_combined.ipynb](src/regression/regression_meg_fmri_combined.ipynb)**  
 
 Set the appropriate paths from preprocessing in the starting cells, then run the file `regression_meg.ipynb` for linear regression on the MEG dataset, and the files `regression_meg_fmri_subset.ipynb`, `regression_fmri.ipynb`, and `regression_meg_fmri_combined.ipynb` for linear regression on the MEG subset, fMRI images and combined data respectively.
 
@@ -34,7 +34,7 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 
 #### 3.2 Vision Transformer
 
-#### 3.3 [Diffusion](src/neural models/diffusion)
+#### 3.3 Diffusion
 
 
 
