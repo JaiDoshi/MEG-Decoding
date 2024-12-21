@@ -10,7 +10,7 @@ Run the file `MEG_preprocessing.ipynb` after pointing the variables specifying t
 - **[fmri_dimensionality_reduction.ipynb](src/preprocessing/fmri_dimensionality_reduction.ipynb)**  
 To create the dimensionality-reduced fMRI data, run the script `fmri_dimensionality_reduction.py`. Specify the dir_name and the path the fMRI data in the script, and pass the sub ('01', '02', '03') as an argument. 
 
-#### 2.3 MEG and Multimodal Preprocessing 
+#### 1.3 MEG and Multimodal Preprocessing 
 - **[create_meg_fmri_subset.ipynb](src/preprocessing/create_meg_fmri_subset.ipynb)**
 - **[create_meg_fmri_dataset.ipynb](src/preprocessing/create_meg_fmri_dataset.ipynb)**  
 To create the train test splits of the MEG dataset, specify the paths to the preprocessed MEG images and the image embeddings in cells 3, 4 and 7 and run the rest of the cells. The train and test datasets will be created in files `valid_epochs_small_train_resplit.pickle` and `valid_epochs_small_test_resplit.pickle`, and the corresponding RGB embeddings will be created in files `image_embeddings_vit_small_train_resplit.npy` and `image_embeddings_vit_test_small_resplit.npy` as dictionaries. Similarly, use the files `src/preprocessing/create_meg_fmri_subset.ipynb` and `src/preprocessing/create_meg_fmri_combined.ipynb` to create the subset of MEG images and the combination of MEG and fMRI images for the multimodal experiments. 
