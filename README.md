@@ -33,7 +33,7 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 #### 3.1 Brain Decoding
 
 #### 3.2 Vision Transformer
-- **[train_vit.py](src/neural models/vit/train_vit.py)**  
+- **[train_vit.py]('src/neural models/vit/train_vit.py')**  
 
 The training script is designed to train MEG models using configurable parameters. To run the training script, follow these steps, and run the script with the desired arguments. You can use the following example command:
 
