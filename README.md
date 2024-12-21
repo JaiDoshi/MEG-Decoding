@@ -31,22 +31,22 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 
 
 #### 3.1 Brain Decoding
-- **[train_vit.py](src/neural%20models/vit/train_vit.py)**  
+- **[train_convnet.py](src/neural%20models/braindecoding/train_convnet.py)**  
 
-This script trains a model for MEG data analysis using the `SimpleConv` architecture. The script includes configurable options for dataset type, preprocessing method, loss functions, and more. To run the script, ensure all necessary Python packages (e.g., PyTorch, NumPy, MNE, WandB) are installed, and use the following command to execute the script with your desired configuration:
+This script trains a dilated residual convnet architecture for MEG data using the `SimpleConv` architecture. The script includes configurable options for dataset type, preprocessing method, loss functions, and more. To run the script, ensure all necessary Python packages (e.g., PyTorch, NumPy, MNE, WandB) are installed, and use the following command to execute the script with your desired configuration:
 
    ```bash
-   python simpleconv_train.py --epochs 100 --batch_size 128 --lr 3e-4 --dilation_type expo --dropout 0.2 --embeddings_type dino --dataset_type large --preprocessing_type raj --wandb_project YourProjectName
+   python train_convnet.py --epochs 100 --batch_size 128 --lr 3e-4 --warmup_lr 1e-6 --warmup_interval 1000 --output_dir ./output --save_interval 50 --print_interval 150 --wandb_project MEG_Project --early_stopping 4 --dropout 0.3 --dilation_type expo --embeddings_type vit --loss_func soft_clip_loss
    ```
 
 
 #### 3.2 Vision Transformer
 - **[train_vit.py](src/neural%20models/vit/train_vit.py)**  
 
-The training script is designed to train MEG models using configurable parameters. To run the training script, follow these steps, and run the script with the desired arguments. You can use the following example command:
+This script trains a custom vision transformer that takes MEG data as input. To run the training script, ensure all necessary Python packages (e.g., PyTorch, NumPy, MNE, WandB) are installed, and use the command below with the desired arguments for the various hyperparameters:
 
    ```bash
-   python train.py --epochs 100 --batch_size 128 --lr 3e-4 --embeddings_type dino --dataset_type large --preprocessing_type raj --wandb_project YourProjectName
+   python -u train_vit.py --epochs 100 --batch_size 128 --lr 3e-4 --warmup_lr 1e-6 --warmup_interval 1000 --output_dir ./output --save_interval 50 --print_interval 150 --wandb_project MEG_ViT_trial --early_stopping 4 --hidden_dropout 0.1 --attention_dropout_prob 0.0 --num_hidden_layers 4 --num_attention_heads 4 --hidden_size 64 --meg_channels 270 --patch_width 2  --embeddings_type dino --loss_func soft_clip_loss
    ```
 
 #### 3.3 Diffusion
