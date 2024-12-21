@@ -32,7 +32,6 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 
 #### 3.1 Brain Decoding
 - **[train_vit.py](src/neural%20models/vit/train_vit.py)**  
-## Running the MEG Training Script with SimpleConv
 
 This script trains a model for MEG data analysis using the `SimpleConv` architecture. The script includes configurable options for dataset type, preprocessing method, loss functions, and more. To run the script, ensure all necessary Python packages (e.g., PyTorch, NumPy, MNE, WandB) are installed, and use the following command to execute the script with your desired configuration:
 
