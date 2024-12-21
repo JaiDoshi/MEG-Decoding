@@ -4,7 +4,7 @@
 
 #### 1.1 MEG Preprocessing
 - **[create_meg_dataset.ipynb](src/preprocessing/create_meg_dataset.ipynb)**  
-Run the file `MEG_preprocessing.ipynb` after changing the variables specifying the path to point to the MEG dataset. 
+Run the file `MEG_preprocessing.ipynb` after pointing the variables specifying the path to the MEG dataset. 
 
 #### 1.2 fMRI Preprocessing 
 - **[fmri_dimensionality_reduction.ipynb](src/preprocessing/fmri_dimensionality_reduction.ipynb)**  
