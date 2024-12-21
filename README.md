@@ -31,16 +31,22 @@ The paths to the preprocessed MEG embeddings from the original dataset have to b
 
 
 #### 3.1 Brain Decoding
+- **[train_vit.py](src/neural models/vit/train_vit.py)**  
+
+
 
 #### 3.2 Vision Transformer
-- **[train_vit.py](MEG-Decoding/src/neural models/vit/train_vit.py)**  
+- **[train_vit.py](src/neural models/vit/train_vit.py)**  
 
 The training script is designed to train MEG models using configurable parameters. To run the training script, follow these steps, and run the script with the desired arguments. You can use the following example command:
 
    ```bash
    python train.py --epochs 100 --batch_size 128 --lr 3e-4 --embeddings_type dino --dataset_type large --preprocessing_type raj --wandb_project YourProjectName
    ```
+
 #### 3.3 Diffusion
+To run the diffusion pipeline, modify the PATH variables in the Jupyter script:
+- **[reconstruction_with_diffusion_prior.ipynb](src/neural models/diffusion/reconstruction_with_diffusion_prior.ipynb)**  
 
 
 
